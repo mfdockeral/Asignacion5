@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:system="clr-namespace:System;assembly=netstandard"
+             mc:Ignorable="d"
+             x:Class="Asignacion5.InformacionPersonal">
+
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+
+            <Label Text="Información Personal" Style="{StaticResource Key=EstiloDeEtiquetas}" HorizontalOptions="CenterAndExpand"/>
+
+            <!--Seccion de Entrys-->
+
+            <Entry Placeholder = "Ingrese nombre" x:Name="TxtNombre" Style="{StaticResource Key=EstiloDeEntrada}"/>
+            <Entry Placeholder = "Ingrese apellido" x:Name="TxtApellido" Style="{StaticResource Key=EstiloDeEntrada}"/>
+            <Entry Placeholder = "Ingrese lugar de nacimiento" x:Name="TxtNacimiento" Style="{StaticResource Key=EstiloDeEntrada}"/>
+            <Entry Placeholder = "Ingrese ocupación" x:Name="TxtOcupacion" Style="{StaticResource Key=EstiloDeEntrada}"/>
+
+
+            <!--Seccion de fecha-->
+
+            <Label Text="Ingrese fecha de nacimiento" Style="{StaticResource EstiloDeEtiquetas}" HorizontalOptions="CenterAndExpand"/>
+            <DatePicker x:Name="fecha" MinimumDate="01/01/1910" MaximumDate="12/31/2099" Date="{Binding SelectedDate}"/>
+
+            <!--Seccion de Pickers-->
+
+            <Picker x:Name="SBEstadoCivil" SelectedIndex ="{Binding EstadoCivil}"  
+                    Title="--Seleccione estado civil--">
+                <Picker.Items>
+                    <x:String>Soltero/a</x:String>
+                    <x:String>Casado/a</x:String>
+                    <x:String>Unión libre</x:String>
+                    <x:String>Prefiero no decirlo</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Picker x:Name="SBGenero" SelectedIndex ="{Binding Genero}"  
+                    Title="--Usted es--">
+                <Picker.Items>
+                    <x:String>Hombre</x:String>
+                    <x:String>Mujer</x:String>
+                    <x:String>Gato</x:String>
+                    <x:String>Caballo</x:String>
+                    <x:String>Prefiero no decirlo</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <!--Seccion de Botones-->
+            <Button Text="Guardar Información" x:Name="BtnGuardarInf" 
+                    Clicked="BtnGuardarInf_Clicked" Style="{StaticResource Key=EstiloDeBoton}"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

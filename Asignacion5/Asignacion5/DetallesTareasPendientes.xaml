@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Asignacion5.DetallesTareasPendientes">
+
+    
+        <ContentPage.Content>
+        <StackLayout Padding="10">
+            
+            <!--Sección de Títulos-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Titulo" Grid.Column="0" Style="{StaticResource Key=EstiloDeEtiquetas}"/>
+                <Label Text="Descripción" Grid.Column="1" Style="{StaticResource Key=EstiloDeEtiquetas}"/>
+                <Label Text="Fecha" Grid.Column="2" Style="{StaticResource Key=EstiloDeEtiquetas}"/>
+                <Label Text="Dias restantes" Grid.Column="3" Style="{StaticResource Key=EstiloDeEtiquetas}"/>
+            </Grid>
+            
+            <!--Sección de Valores-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="titulo" Grid.Column="0"/>
+                <Label x:Name="detalle" Grid.Column="1"/>
+                <Label x:Name="fecha" Grid.Column="2" />
+                <Label x:Name="resta" Grid.Column="3"/>
+            </Grid>
+            
+            <!--Sección de Botones-->
+            <Button Text="Marcar como completada" Clicked="Button_Clicked" Style="{StaticResource Key=EstiloDeBoton}"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

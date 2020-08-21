@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Asignacion5.MenuPrincipalDetail"
+             Title="Pagina de Inicio">
+    
+  <StackLayout Padding="10">
+        <StackLayout>
+            <!--Seccion Botones-->
+            <Button Text="Informacion Personal" x:Name="BtnInforP" 
+                    Clicked="InformacionPersonalPage_Tapped" Style="{StaticResource Key=EstiloDeBoton}"/>
+
+            <Button Text="Lista de Tareas Pendientes" x:Name="BtnLTP" 
+                    Clicked="TareasPendientesPage_Tapped" Style="{StaticResource Key=EstiloDeBoton}"/>
+
+            <!--Seccion Imagenes-->
+              <Image Source="WelcomeLogo3"/>
+            
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
